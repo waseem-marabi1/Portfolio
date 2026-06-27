@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waseem Marabi | Front-End Developer</title>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#070B1A',
+                        dark2: '#0B1020',
+                        card: '#0D1328',
+                        card2: '#091330',
+                        purple: '#8B5CF6',
+                        purple2: '#A78BFA',
+                        blue: '#38BDF8'
+                    },
+                    fontFamily: {
+                        outfit: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body class="font-outfit bg-dark text-white overflow-x-hidden">
+
+    <div class="fixed inset-0 -z-10 bg-grid"></div>
+    <div class="fixed -top-40 -right-32 -z-10 w-[350px] h-[350px] rounded-full bg-purple/40 blur-[110px]"></div>
+    <div class="fixed -bottom-40 -left-32 -z-10 w-[350px] h-[350px] rounded-full bg-blue/25 blur-[110px]"></div>
+
+    <!-- navbar -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-dark/85 backdrop-blur-xl border-b border-white/10">
+        <nav class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 h-20 flex items-center justify-between">
+            <a href="#home" class="text-3xl font-black text-gradient">waseem</a>
+
+            <div class="hidden lg:flex items-center gap-9 text-[17px] font-medium">
+                <a class="nav-link" href="#home">Home</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#skills">Skills</a>
+                <a class="nav-link" href="#projects">Projects</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </div>
+
+            <a href="mailto:waseemmarabicod@gmail.com?subject=Portfolio%20Contact&body=Hello%20Waseem," class="hidden lg:flex items-center gap-2 px-5 py-3 rounded-2xl bg-gradient-to-r from-purple to-blue font-bold shadow-lg shadow-purple/20 hover:-translate-y-1 duration-300">
+                Hire Me <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+            <button id="menuBtn" class="lg:hidden w-11 h-11 rounded-xl border border-white/15 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </nav>
+
+        <div id="mobileMenu" class="hidden lg:hidden bg-dark/95 border-t border-white/10">
+            <div class="px-5 py-5 flex flex-col gap-3 text-lg">
+                <a class="mobile-link px-4 py-3 rounded-xl bg-white/5" href="#home">Home</a>
+                <a class="mobile-link px-4 py-3 rounded-xl bg-white/5" href="#about">About</a>
+                <a class="mobile-link px-4 py-3 rounded-xl bg-white/5" href="#skills">Skills</a>
+                <a class="mobile-link px-4 py-3 rounded-xl bg-white/5" href="#projects">Projects</a>
+                <a class="mobile-link px-4 py-3 rounded-xl bg-white/5" href="#contact">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- home -->
+    <section id="home" class="min-h-screen pt-28 lg:pt-32 flex items-center">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 w-full grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+
+            <div class="text-center lg:text-left reveal">
+                <p class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple/10 border border-purple/30 text-purple2 font-semibold mb-6">
+                    <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+                    Available for freelance projects
+                </p>
+
+                <h1 class="text-4xl sm:text-6xl lg:text-7xl font-black leading-tight">
+                    Hi, I'm <br>
+                    <span class="text-gradient">Waseem Marabi</span>
+                </h1>
+
+                <h2 class="mt-5 text-xl sm:text-2xl font-bold text-white/90">Front-End Developer</h2>
+                <p class="mt-5 max-w-2xl mx-auto lg:mx-0 text-lg sm:text-xl leading-8 text-slate-300">
+                    I build responsive, modern, and clean websites using HTML, CSS, JavaScript, and Tailwind CSS.
+                </p>
+
+                <div class="mt-9 flex flex-col sm:flex-row justify-center lg:justify-start gap-4">
+                    <a href="#projects" class="px-7 py-4 rounded-2xl bg-gradient-to-r from-purple to-blue text-lg font-bold text-center shadow-lg shadow-purple/25 hover:-translate-y-1 duration-300">
+                        View My Work <i class="fa-solid fa-arrow-right ml-2"></i>
+                    </a>
+                    <a href="#contact" class="px-7 py-4 rounded-2xl border border-white/20 bg-white/5 text-lg font-bold text-center hover:bg-purple/15 hover:border-purple2 hover:-translate-y-1 duration-300">
+                        Contact Me <i class="fa-solid fa-user ml-2"></i>
+                    </a>
+                </div>
+
+                <div class="mt-10 flex justify-center lg:justify-start items-center gap-4">
+                    <a class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl hover:bg-purple/20 hover:border-purple2 hover:-translate-y-1 duration-300" href="https://github.com/waseem-marabi1" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl hover:bg-purple/20 hover:border-purple2 hover:-translate-y-1 duration-300" href="https://www.linkedin.com/in/waseem-marabi-b17b06326/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl hover:bg-purple/20 hover:border-purple2 hover:-translate-y-1 duration-300" href="mailto:waseemmarabicod@gmail.com?subject=Portfolio%20Contact&body=Hello%20Waseem,"><i class="fa-solid fa-envelope"></i></a>
+                    <a class="w-12 h-12 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center text-xl hover:bg-purple/20 hover:border-purple2 hover:-translate-y-1 duration-300" href="https://www.upwork.com/freelancers/~01cb1edb6edca92c6b" target="_blank"><i class="fa-brands fa-upwork"></i></a>
+                </div>
+            </div>
+
+            <div class="relative flex justify-center lg:justify-end reveal">
+                <div class="relative w-full max-w-[430px] sm:max-w-[500px] aspect-square rounded-[38px] p-5 bg-white/5 border border-white/10 shadow-2xl shadow-black/30 float-card">
+                    <div class="absolute -top-5 -left-5 w-24 h-24 rounded-3xl bg-blue/20 blur-xl"></div>
+                    <div class="absolute -bottom-5 -right-5 w-28 h-28 rounded-3xl bg-purple/25 blur-xl"></div>
+
+                    <div class="relative w-full h-full rounded-[30px] bg-gradient-to-br from-purple/20 to-blue/10 border border-white/10 overflow-hidden flex items-end justify-center">
+                        <img src="img/waseem_Nero_AI_Background_Remover_transparent.png" alt="waseem marabi" class="w-[82%] h-[92%] object-contain object-bottom drop-shadow-2xl">
+
+                        <div class="hidden sm:flex absolute top-6 left-6 items-center gap-2 px-4 py-3 rounded-2xl bg-dark/70 border border-white/10 backdrop-blur-xl font-bold">
+                            <i class="fa-solid fa-code text-purple2"></i>
+                            <span>Clean Code</span>
+                        </div>
+                        <div class="hidden sm:flex absolute bottom-6 right-6 items-center gap-2 px-4 py-3 rounded-2xl bg-dark/70 border border-white/10 backdrop-blur-xl font-bold">
+                            <i class="fa-solid fa-mobile-screen-button text-blue"></i>
+                            <span>Responsive</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- stats -->
+    <section class="max-w-7xl mx-auto px-5 pt-10 sm:px-8 lg:px-12 pb-20">
+        <div class="grid sm:grid-cols-3 gap-5">
+            <div class="p-7 rounded-[28px] bg-white/5 border border-white/10 text-center shadow-xl shadow-black/20 hover:-translate-y-2 duration-300 reveal">
+                <h3 class="text-4xl sm:text-5xl font-black text-purple2">5+</h3>
+                <p class="mt-2 text-slate-300">Completed Projects</p>
+            </div>
+            <div class="p-7 rounded-[28px] bg-white/5 border border-white/10 text-center shadow-xl shadow-black/20 hover:-translate-y-2 duration-300 reveal">
+                <h3 class="text-4xl sm:text-5xl font-black text-purple2">100%</h3>
+                <p class="mt-2 text-slate-300">Responsive Design</p>
+            </div>
+            <div class="p-7 rounded-[28px] bg-white/5 border border-white/10 text-center shadow-xl shadow-black/20 hover:-translate-y-2 duration-300 reveal">
+                <h3 class="text-4xl sm:text-5xl font-black text-purple2">24/7</h3>
+                <p class="mt-2 text-slate-300">Learning & Improving</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- about -->
+    <section id="about" class="py-24 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="order-2 lg:order-1 reveal">
+                <div class="relative min-h-[420px] sm:min-h-[520px] rounded-[40px] overflow-hidden p-5 bg-white/5 border border-white/10 shadow-2xl shadow-black/30">
+                    <img src="img/124602a0-f179-44c6-989d-615114f6419f.png" alt="about image" class="w-full h-[420px] sm:h-[500px] object-cover rounded-[32px]">
+                    <div class="absolute left-8 right-8 bottom-8 p-5 rounded-3xl bg-dark/75 border border-white/10 backdrop-blur-xl">
+                        <div class="flex items-center gap-4">
+                            <div class="w-12 h-12 rounded-2xl bg-purple flex items-center justify-center">
+                                <i class="fa-solid fa-laptop-code text-xl"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-lg">Front-End Focused</h3>
+                                <p class="text-slate-300 text-sm">Modern UI, clean layout, responsive pages.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="order-1 lg:order-2 reveal">
+                <p class="section-label">About Me</p>
+                <h2 class="mt-4 max-w-3xl text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">Building websites that look clean and work smoothly.</h2>
+                <p class="mt-6 text-slate-300 leading-8 text-lg">
+                    I'm a Computer Engineering student passionate about Front-End and Full-Stack Development. I enjoy building clean, responsive, and user-friendly websites while continuously improving through real projects.
+                </p>
+
+                <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10"><i class="fa-solid fa-check w-7 h-7 rounded-full bg-green-500 flex items-center justify-center text-sm"></i><span>Responsive layouts</span></div>
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10"><i class="fa-solid fa-check w-7 h-7 rounded-full bg-green-500 flex items-center justify-center text-sm"></i><span>Modern UI design</span></div>
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10"><i class="fa-solid fa-check w-7 h-7 rounded-full bg-green-500 flex items-center justify-center text-sm"></i><span>Clean HTML/CSS</span></div>
+                    <div class="flex items-center gap-3 p-4 rounded-2xl bg-white/5 border border-white/10"><i class="fa-solid fa-check w-7 h-7 rounded-full bg-green-500 flex items-center justify-center text-sm"></i><span>Fast landing pages</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- skills -->
+<section id="skills" class="py-24 scroll-mt-24">
+    <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+
+        <div class="text-center mb-14 reveal">
+            <p class="section-label justify-center">My Skills</p>
+            <h2 class="mt-4 text-4xl sm:text-5xl font-black">
+                Skills & Technologies
+            </h2>
+            <p class="mt-5 max-w-2xl mx-auto text-gray-300 leading-8">
+                Technologies I use to build responsive and modern websites.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-7">
+
+            <div class="p-7 rounded-[30px] bg-white/5 border border-white/10 shadow-xl shadow-black/20 hover:-translate-y-2 hover:border-purple2/50 duration-300 reveal">
+                <div class="flex items-center gap-4 mb-7">
+                    <div class="w-14 h-14 rounded-2xl bg-purple/15 text-purple2 text-xl flex items-center justify-center">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 class="text-2xl font-extrabold">Front-End Development</h3>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="">
+                        <span>HTML5</span>
+                    </div>
+
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="">
+                        <span>CSS3</span>
+                    </div>
+
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="">
+                        <span>JavaScript</span>
+                    </div>
+
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="">
+                        <span>Tailwind</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-7 rounded-[30px] bg-white/5 border border-white/10 shadow-xl shadow-black/20 hover:-translate-y-2 hover:border-purple2/50 duration-300 reveal">
+                <div class="flex items-center gap-4 mb-7">
+                    <div class="w-14 h-14 rounded-2xl bg-purple/15 text-purple2 text-xl flex items-center justify-center">
+                        <i class="fa-solid fa-terminal"></i>
+                    </div>
+                    <h3 class="text-2xl font-extrabold">Programming</h3>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" alt="">
+                        <span>C++</span>
+                    </div>
+
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="">
+                        <span>Java</span>
+                    </div>
+
+                    <div class="skill-box">
+                        <div class="w-11 h-11 rounded-xl bg-gradient-to-r from-purple to-blue flex items-center justify-center font-black">
+                            OOP
+                        </div>
+                        <span>OOP</span>
+                    </div>
+
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="">
+                        <span>MySQL</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-7 rounded-[30px] bg-white/5 border border-white/10 shadow-xl shadow-black/20 hover:-translate-y-2 hover:border-purple2/50 duration-300 reveal">
+                <div class="flex items-center gap-4 mb-7">
+                    <div class="w-14 h-14 rounded-2xl bg-purple/15 text-purple2 text-xl flex items-center justify-center">
+                        <i class="fa-solid fa-screwdriver-wrench"></i>
+                    </div>
+                    <h3 class="text-2xl font-extrabold">Tools & Platforms</h3>
+                </div>
+
+                <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="">
+                        <span>Git</span>
+                    </div>
+
+                    <div class="skill-box">
+                        <img class="invert" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="">
+                        <span>GitHub</span>
+                    </div>
+
+                    <div class="skill-box">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original.svg" alt="">
+                        <span>VS Code</span>
+                    </div>
+
+                    <div class="skill-box">
+                        <div class="w-11 h-11 rounded-xl bg-gradient-to-r from-purple to-blue flex items-center justify-center font-black">
+                            NB
+                        </div>
+                        <span>NetBeans</span>
+                    </div>
+                </div>
+            </div>
+
+       
+<div class="p-7 rounded-[30px] bg-white/5 border border-white/10 shadow-xl shadow-black/20 hover:-translate-y-2 hover:border-purple2/50 duration-300 reveal">
+    <div class="flex items-center gap-4 mb-7">
+        <div class="w-14 h-14 rounded-2xl bg-purple/15 text-purple2 text-xl flex items-center justify-center">
+            <i class="fa-solid fa-server"></i>
+        </div>
+        <h3 class="text-2xl font-extrabold">Currently Learning Backend</h3>
+    </div>
+
+    <p class="text-gray-300 leading-7 mb-6">
+       I am currently learning back-end development as part of my full-stack course.
+    </p>
+
+    <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="">
+            <span>Node.js</span>
+        </div>
+
+        <div class="skill-box">
+            <img class="invert" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" alt="">
+            <span>Express.js</span>
+        </div>
+
+        <div class="skill-box">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-r from-purple to-blue flex items-center justify-center font-black">
+                API
+            </div>
+            <span>REST APIs</span>
+        </div>
+
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="">
+            <span>MongoDB</span>
+        </div>
+
+        <div class="skill-box">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="">
+            <span>SQL</span>
+        </div>
+
+        <div class="skill-box">
+            <div class="w-11 h-11 rounded-xl bg-gradient-to-r from-purple to-blue flex items-center justify-center font-black">
+                AUTH
+            </div>
+            <span>Authentication</span>
+        </div>
+    </div>
+</div>
+
+        </div>
+    </div>
+</section>
+    <!-- projects -->
+    <section id="projects" class="py-24 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+            <div class="text-center mb-14 reveal">
+                <p class="section-label justify-center">My Projects</p>
+                <h2 class="mt-4 mx-auto max-w-3xl text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">Selected work</h2>
+                <p class="mt-5 text-slate-300 text-lg max-w-2xl mx-auto">Here are some projects that show my front-end skills, responsive layouts, and clean UI design.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 xl:grid-cols-3 gap-7">
+                <div class="rounded-[32px] bg-white/5 border border-white/10 overflow-hidden flex flex-col shadow-xl shadow-black/20 hover:-translate-y-2 hover:border-purple2/50 duration-300 reveal">
+                    <div class="aspect-[16/10] bg-gradient-to-br from-purple/20 to-blue/10 overflow-hidden">
+                        <img src="img/moviehub.png" alt="MovieHub project" class="w-full h-full object-cover hover:scale-105 duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="hidden w-full h-full items-center justify-center text-3xl font-black text-purple2">MovieHub</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-2xl font-black">MovieHub</h3>
+                        <p class="mt-3 text-slate-300 leading-7 flex-1">A responsive movie website that shows popular movies and details with a clean front-end interface.</p>
+                        <div class="mt-5 flex flex-wrap gap-2"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span></div>
+                        <div class="mt-6 grid grid-cols-2 gap-3">
+                            <button class="project-btn" id="movieDemo">Live Demo <i class="fa-solid fa-up-right-from-square"></i></button>
+                            <button class="project-btn2" id="moviegit">GitHub <i class="fa-brands fa-github"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-[32px] bg-white/5 border border-white/10 overflow-hidden flex flex-col shadow-xl shadow-black/20 hover:-translate-y-2 hover:border-purple2/50 duration-300 reveal">
+                    <div class="aspect-[16/10] bg-gradient-to-br from-purple/20 to-blue/10 overflow-hidden">
+                        <img src="img/lux.png" alt="Option Store project" class="w-full h-full object-cover hover:scale-105 duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="hidden w-full h-full items-center justify-center text-3xl font-black text-purple2">Option Store</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-2xl font-black">Option Store</h3>
+                        <p class="mt-3 text-slate-300 leading-7 flex-1">Modern and responsive website for an optical store with a professional product presentation.</p>
+                        <div class="mt-5 flex flex-wrap gap-2"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">Responsive</span></div>
+                        <div class="mt-6 grid grid-cols-2 gap-3">
+                            <button class="project-btn" id="luxDemo">Live Demo <i class="fa-solid fa-up-right-from-square"></i></button>
+                            <button class="project-btn2" id="luxgit">GitHub <i class="fa-brands fa-github"></i></button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="rounded-[32px] bg-white/5 border border-white/10 overflow-hidden flex flex-col shadow-xl shadow-black/20 hover:-translate-y-2 hover:border-purple2/50 duration-300 reveal md:col-span-2 xl:col-span-1">
+                    <div class="aspect-[16/10] bg-gradient-to-br from-purple/20 to-blue/10 overflow-hidden">
+                        <img src="img/dentalcare.png" alt="DentalCare project" class="w-full h-full object-cover hover:scale-105 duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'">
+                        <div class="hidden w-full h-full items-center justify-center text-3xl font-black text-purple2">DentalCare</div>
+                    </div>
+                    <div class="p-6 flex flex-col flex-1">
+                        <h3 class="text-2xl font-black">DentalCare</h3>
+                        <p class="mt-3 text-slate-300 leading-7 flex-1">Responsive dental clinic landing page built with HTML and Tailwind CSS for a modern medical brand.</p>
+                        <div class="mt-5 flex flex-wrap gap-2"><span class="tag">Tailwind</span><span class="tag">HTML</span><span class="tag">Landing Page</span></div>
+                        <div class="mt-6 grid grid-cols-2 gap-3">
+                            <button class="project-btn" id="dentalDemo">Live Demo <i class="fa-solid fa-up-right-from-square"></i></button>
+                            <button class="project-btn2" id="dentalgit">GitHub <i class="fa-brands fa-github"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- contact -->
+    <section id="contact" class="py-24 scroll-mt-24">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12">
+            <div class="rounded-[40px] p-6 sm:p-10 lg:p-14 bg-white/5 border border-white/10 shadow-2xl shadow-black/25 grid lg:grid-cols-2 gap-10 items-center reveal">
+                <div>
+                    <p class="section-label">Contact Me</p>
+                    <h2 class="mt-4 text-4xl sm:text-5xl lg:text-6xl font-black leading-tight">Let's build something clean and responsive.</h2>
+                    <p class="mt-5 text-slate-300 text-lg leading-8">
+                        Need a landing page, portfolio, or responsive website? Send me a message and let's talk about your project.
+                    </p>
+
+                    <div class="mt-8 space-y-4">
+                        <a class="contact-row" href="mailto:waseemmarabicod@gmail.com?subject=Portfolio%20Contact&body=Hello%20Waseem,"><i class="fa-solid fa-envelope text-purple2 text-xl"></i><span>waseemmarabicod@gmail.com</span></a>
+                        <a class="contact-row" href="https://wa.me/972569556223" target="_blank"><i class="fa-brands fa-whatsapp text-purple2 text-xl"></i><span>+972 56-955-6223</span></a>
+                    </div>
+                </div>
+
+                <div class="grid sm:grid-cols-2 gap-4">
+                    <a class="big-social" href="https://github.com/waseem-marabi1" target="_blank"><i class="fa-brands fa-github"></i><span>GitHub</span></a>
+                    <a class="big-social" href="https://www.linkedin.com/in/waseem-marabi-b17b06326/" target="_blank"><i class="fa-brands fa-linkedin-in"></i><span>LinkedIn</span></a>
+                    <a class="big-social" href="https://www.upwork.com/freelancers/~01cb1edb6edca92c6b?mp_source=share" target="_blank"><i class="fa-brands fa-upwork"></i><span>Upwork</span></a>
+                    <a class="big-social" href="https://www.instagram.com/waseem_marabi" target="_blank"><i class="fa-brands fa-instagram"></i><span>Instagram</span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-t border-white/10 py-8">
+        <div class="max-w-7xl mx-auto px-5 sm:px-8 lg:px-12 flex flex-col md:flex-row justify-between gap-4 text-center md:text-left text-slate-400">
+            <p>© 2026 <a class="text-purple2 hover:text-white" href="https://www.linkedin.com/in/waseem-marabi-b17b06326/" target="_blank">Waseem Marabi</a>. All rights reserved.</p>
+            <p>Built with <i class="fa-solid fa-heart text-purple2 pulse-heart"></i> and passion.</p>
+        </div>
+    </footer>
+
+    <button id="toTop" class="fixed right-5 bottom-5 w-12 h-12 rounded-2xl bg-purple text-white border border-white/15 opacity-0 invisible translate-y-3 duration-300 z-50" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

@@ -20,21 +20,20 @@ var dentalDemo = document.getElementById("dentalDemo")
 var dentalgit = document.getElementById("dentalgit")
 
 movieDemo.onclick = function () {
-    window.open("https://waseem-marabi1.github.io/MovieHub/", "_blank")
+    window.open("https://waseem-marabi1.github.io/moviehub/", "_blank")
 }
 
 moviegit.onclick = function () {
-    window.open("https://github.com/waseem-marabi1/MovieHub", "_blank")
+    window.open("https://github.com/waseem-marabi1/moviehub", "_blank")
 }
 
 luxDemo.onclick = function () {
-    window.open("https://waseem-marabi1.github.io/Lux-Optics/", "_blank")
+    window.open("https://waseem-marabi1.github.io/lux-optics/", "_blank")
 }
 
 luxgit.onclick = function () {
-    window.open("https://github.com/waseem-marabi1/Lux-Optics", "_blank")
+    window.open("https://github.com/waseem-marabi1/lux-optics", "_blank")
 }
-
 dentalDemo.onclick = function () {
     window.open("https://waseem-marabi1.github.io/DentalCare-Clinic-Website/", "_blank")
 }
